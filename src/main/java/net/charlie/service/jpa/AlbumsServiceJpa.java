@@ -20,4 +20,15 @@ public class AlbumsServiceJpa implements IAlbumsService {
 		return repoAlbum.findAll();
 	}
 
+	@Override
+	public void guardar(Album album) {
+		repoAlbum.save(album);
+	}
+
+	@Override
+	public void eliminar(int idAlbum) {
+		repoAlbum.deleteById(idAlbum);
+		
+	}
+
 }
